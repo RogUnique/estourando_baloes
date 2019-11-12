@@ -24,7 +24,7 @@ function iniciaJogo() {
 	document.getElementById('cronometro').innerHTML=tempo_segundos; 
 
 
-	var qtde_baloes =25;
+	var qtde_baloes =50;
 	
 	criar_baloes(qtde_baloes);
 
