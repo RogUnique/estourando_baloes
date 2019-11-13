@@ -16,7 +16,7 @@ function playWin(){
 	pop.src = "audio/pop.mp3";
 	pop.play();
      }
-   	
+ 
 
 
 function iniciaJogo() {
@@ -54,11 +54,7 @@ function iniciaJogo() {
 	contagem_tempo(tempo_segundos + 1);
 
 }
- function playPop(){
-	var pop = new Audio();
-	pop.src ="audio/pop.mp3";
-	pop.play();
-	}
+
  function contagem_tempo(segundos){
  	
  	segundos = segundos - 1;
