@@ -5,6 +5,19 @@ function playPop(){
 	pop.src ="audio/pop.mp3";
 	pop.play();
 	}
+function playWin(){
+	var win = new Audio();
+	win.src = "audio/win_or_lose/win.mp3";
+	win.play();
+		}
+ 	
+ function playLose( ) {
+  	var pop = new Audio();
+	pop.src = "audio/pop.mp3";
+	pop.play();
+     }
+   	
+
 
 function iniciaJogo() {
 	
@@ -114,6 +127,7 @@ function pontuacao (acao){
 function situacao_jogo(baloes_inteiros, baloes_estourados){
 	if(baloes_inteiros ==0){
 		alert('Parabéns, você conseguiu estourar todos os balões a tempo!');
+		playWin()
 		parar_jogo();
 		}
 	}
