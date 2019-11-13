@@ -64,7 +64,8 @@ function iniciaJogo() {
  
  function game_over (){
  	remove_eventos_baloes();
- 	alert('Fim de jogo, você não conseguiu estourar todos os baloes há tempo');
+ 	window.location.href = "game_over.html";
+	 //alert('Fim de jogo, você não conseguiu estourar todos os baloes há tempo');
  }
 
  function criar_baloes(qtde_baloes){
