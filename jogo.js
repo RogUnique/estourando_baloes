@@ -12,7 +12,7 @@ function playWin(){
 		}
  	
  function playLose( ) {
-  	var pop = new Audio();
+  	var lose = new Audio();
 	lose.src = "audio/pop.mp3";
 	lose.play();
      }
