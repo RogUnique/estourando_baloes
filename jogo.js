@@ -1,5 +1,11 @@
 var timerId = null; //variavel que armazena a chamada da função timeout
 
+function playPop(){
+	var pop = new Audio();
+	pop.src ="audio/pop.mp3";
+	pop.play();
+	}
+
 function iniciaJogo() {
 	
 	var url = window.location.search;
