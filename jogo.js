@@ -35,7 +35,11 @@ function iniciaJogo() {
 	contagem_tempo(tempo_segundos + 1);
 
 }
- 
+ function playPop(){
+	var pop = new Audio();
+	pop.src ="audio/pop.mp3";
+	pop.play();
+	}
  function contagem_tempo(segundos){
  	
  	segundos = segundos - 1;
@@ -76,8 +80,11 @@ function iniciaJogo() {
   	document.getElementById(id_balao).setAttribute("onclick","")
   	
   	document.getElementById(id_balao).src = 'imagens/balao_azul_pequeno_estourado.png';
-
-  	pontuacao(-1);
+	  
+	playPop();
+  	
+       pontuacao(-1);
+	  
   }
 
 function pontuacao (acao){
