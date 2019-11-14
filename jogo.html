@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+ 
 <html lang="pt-br">
 	<head>
 		<meta charset="UTF-8">		
@@ -6,52 +6,54 @@
 		<title>Estourando balões</title>
 
 		<script type="text/javascript" src="jogo.js"></script>
-
+		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 			
 
 	</head>
 
 	<body onload="iniciaJogo()">
-		<div style="float: left; width: auto; height: 500px; background: #FFF; border:solid 1px #A2A2A2; margin-right:5px;" >
-			<table border="0">
+		<div class="table-responsive" style="float: left; width: auto; height: 500px; background: #FFF; border:solid 1px #A2A2A2;  margin-left:350px;" >
+			<table  class="table-responsive" border="1">
 				<tr> 
-					<td>
-						<img src="imagens/balao_azul_grande.png"/>
-					</td>
-				
-					<td>
-						<span id="baloes_inteiros" style="font-size: 40px;"></span>
+					<th >
+						<img src="imagens/balao_azul_grande.png" style="margin-right: auto; margin-left: auto; padding-left: 190px;" />
+						<span id="baloes_inteiros" style="font-size: 40px;" ></span>
 					</td>
 				</tr>	
 			</table>
 			<br/>
-			<table border="0"> 
-				<tr> 
-					<td>
-						<img src="imagens/balao_azul_grande_estourado.png"/>
+			<table  class="table-responsive" border="1"> 
+				<tr>  
+					<td scope="row">
+						<img src="imagens/balao_azul_grande_estourado.png" style="margin-right: auto; margin-left: auto;  padding-left: 180px;" />
+				 		 <span id="baloes_estourados" style="font-size: 40px;"></span>
 					</td>
-				
-					<td>
-						 <span id="baloes_estourados" style="font-size: 40px;"></span>
+				</tr>
+			</table >	
+			<table  border="1" style="width: 140px; height: 132px;"> 
+				<tr  > 
+					<td  style="background: url(imagens/cronometro.png );text-align:center; ">
+						<span id="cronometro" style="color:red; font-size: 30px; " >
+						 </span>	
 					</td>
 				</tr>
 			</table>	
-			<table border="0" style="width: 140px; height: 132px;"> 
-				<tr> 
-					<td style="background: url(imagens/cronometro.png); text-align: center; ">
-						<span id="cronometro" style="color:red; font-size: 30px;">  </span>	
-					</td>
-				</tr>
-			</table>
+
+					
+			
+			<br/>
 			<audio controls loop>
+			  	
 			  	<source src="audio/win_or_lose/músic_game.mp3"	type="audio/mp3">
-			  	 
+			  	
 				Your browser does not support the audio element.
-			</audio>
-
+			</audio>			
 		</div>
-		 <div  id="cenario" style="float: left; width: 600px; height: 500px; background: url('imagens/background.png'); background-position: bottom ;" ></div>
-
+		<div id="cenario" style="float: left; width: 600px; height: 500px; background: url('imagens/background.png'); background-position: bottom;"></div>
+			
+	 
+	
 	</body>
 	
 </html>
