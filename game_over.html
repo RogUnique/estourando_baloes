@@ -5,18 +5,28 @@
 	<script type="text/javascript" src="jogo.js"></script>
 	<style type="text/css">
 		body{
-			background-color: black;
+		 	background-color: #58ACFA;
 		}
 	</style>
 	
 
 </head>
 <body  id='body'  >
-	<h1 style="text-align:center;color:red;" onclick="playLose();"> GAME OVER</h1>
+	<h1 style="text-align:center;color:red;" > GAME OVER</h1>
 	<audio id="GameOver">
 	  	<source src="audio/win_or_lose/game_over.mp3" type="audio/mp3">
 	</audio>
-	 
+	 <div class="container">
+
+				<div class="row">
+					<div class="col-md-6" align="center">
+						<img src="imagens/balao_azul_grande_estourado.png" onclick="playLose( )" / >	
+						 <p>Você perdeu :( tente novamente!</p>
+						 <img style="margin-right: auto; margin-left: auto; width: 6em;" src="imagens/iniciar.png" onclick= "PlayAgain ()" />
+					</div>
+				</div> <!--row-->
+			</div>		
 </body>
 </html>
+
 
