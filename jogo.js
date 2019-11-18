@@ -1,5 +1,8 @@
 var timerId = null; //variavel que armazena a chamada da função timeout
+					//variable hold the call of the function timeout
 
+
+//Game Sounds
 function playPop(){
 	var pop = new Audio();
 	pop.src ="audio/pop.mp3";
@@ -7,7 +10,7 @@ function playPop(){
 	}
 function playWin(){
 	var win = new Audio();
-	win.src = "audio/win_or_lose/win.mp3";
+	win.src = "audio/win_or_lose/irra.mp3";
 	win.play();
 		}
  	
@@ -16,15 +19,12 @@ function playWin(){
 	lose.src = "audio/win_or_lose/game_over.mp3";
 	lose.play();
      }
-
-
-function PlayAgain (){
+ function PlayAgain (){
  	 window.location.href='index.html';
 
  }    
  
-
-
+//Function that start the game
 function iniciaJogo() {
 	
 	var url = window.location.search;
@@ -33,41 +33,48 @@ function iniciaJogo() {
 	
 	var tempo_segundos = 0;
 	
-	if (nivel_jogo ==1){
+	if(nivel_jogo ==1){
 		tempo_segundos = 120;
 	}
 	
-	if (nivel_jogo ==2){
+	if(nivel_jogo ==2){
 		tempo_segundos = 60;
 	}
 
-	if (nivel_jogo ==3){
+	if(nivel_jogo ==3){
 		tempo_segundos = 30;
 	}
 
+
+
+	// inserting seconds into the span
 	//inserindo segundos no span
 	document.getElementById('cronometro').innerHTML=tempo_segundos; 
 
-
+	//amount of balloons 
+	// quantidade de balões
 	var qtde_baloes =50;
 	
-	criar_baloes(qtde_baloes);
+	cria_baloes(qtde_baloes);
 
+	//printing the amount of integer balloons
 	//imprimindo a quantidade de baloes inteiros
 	document.getElementById('baloes_inteiros').innerHTML = qtde_baloes;
 	document.getElementById('baloes_estourados').innerHTML = 0;
 
+	//counting the time
 	contagem_tempo(tempo_segundos + 1);
 
 }
-
+	
+ //function countdown 
  function contagem_tempo(segundos){
  	
  	segundos = segundos - 1;
  	
  	if(segundos == -1){
  		clearTimeout(timerId); // para a execução da funcão setTimeout
- 		game_over();  
+ 		game_over();  			//stop execution of function setTimeout
  		return false;
 
  	}
@@ -80,10 +87,10 @@ function iniciaJogo() {
  function game_over (){
  	remove_eventos_baloes();
  	window.location.href = "game_over.html";
-	 //alert('Fim de jogo, você não conseguiu estourar todos os baloes há tempo');
- }
+	  
 
- function criar_baloes(qtde_baloes){
+ function cria_baloes(qtde_baloes){
+ 	
  	for (var i = 1; i <= qtde_baloes; i++) {
  		
  		var balao = document.createElement("img");
@@ -105,7 +112,7 @@ function iniciaJogo() {
 	  
 	playPop();
   	
-       pontuacao(-1);
+    pontuacao(-1);
 	  
   }
 
@@ -133,7 +140,8 @@ function situacao_jogo(baloes_inteiros, baloes_estourados){
 		parar_jogo();
 		}
 	}
- function parar_jogo(){
+
+function parar_jogo(){
  	clearTimeout(timerId);
 }
 function remove_eventos_baloes() {
