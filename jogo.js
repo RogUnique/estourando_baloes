@@ -16,6 +16,12 @@ function playWin(){
 	lose.src = "audio/win_or_lose/game_over.mp3";
 	lose.play();
      }
+
+
+function PlayAgain (){
+ 	 window.location.href='index.html';
+
+ }    
  
 
 
