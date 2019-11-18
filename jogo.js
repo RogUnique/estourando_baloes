@@ -1,29 +1,6 @@
 var timerId = null; //variavel que armazena a chamada da função timeout
 					//variable hold the call of the function timeout
 
-
-//Game Sounds
-function playPop(){
-	var pop = new Audio();
-	pop.src ="audio/pop.mp3";
-	pop.play();
-	}
-function playWin(){
-	var win = new Audio();
-	win.src = "audio/win_or_lose/irra.mp3";
-	win.play();
-		}
- 	
- function playLose( ) {
-  	var lose = new Audio();
-	lose.src = "audio/win_or_lose/game_over.mp3";
-	lose.play();
-     }
- function PlayAgain (){
- 	 window.location.href='index.html';
-
- }    
- 
 //Function that start the game
 function iniciaJogo() {
 	
@@ -44,9 +21,6 @@ function iniciaJogo() {
 	if(nivel_jogo ==3){
 		tempo_segundos = 30;
 	}
-
-
-
 	// inserting seconds into the span
 	//inserindo segundos no span
 	document.getElementById('cronometro').innerHTML=tempo_segundos; 
@@ -63,9 +37,42 @@ function iniciaJogo() {
 	document.getElementById('baloes_estourados').innerHTML = 0;
 
 	//counting the time
-	contagem_tempo(tempo_segundos + 1);
-
+	contagem_tempo(tempo_segundos + 1);	
 }
+
+
+
+
+//Game Sounds
+function playPop(){
+	var pop = new Audio();
+	pop.src ="audio/pop.mp3";
+	pop.play();
+	}
+
+function playWin(){
+	var win = new Audio();
+	win.src = "audio/win_or_lose/irra.mp3";
+	win.play();
+		}
+
+ function playLose( ) {
+  	var lose = new Audio();
+	lose.src = "audio/win_or_lose/game_over.mp3";
+	lose.play();
+     }
+ 
+ function PlayAgain (){
+ 	 window.location.href='index.html';
+ 	}    
+ 
+
+
+
+
+	
+
+
 	
  //function countdown 
  function contagem_tempo(segundos){
@@ -88,7 +95,7 @@ function iniciaJogo() {
  	remove_eventos_baloes();
  	window.location.href = "game_over.html";
 	  
-
+}
  function cria_baloes(qtde_baloes){
  	
  	for (var i = 1; i <= qtde_baloes; i++) {
