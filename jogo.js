@@ -142,7 +142,7 @@ function pontuacao (acao){
 }
 function situacao_jogo(baloes_inteiros, baloes_estourados){
 	if(baloes_inteiros ==0){
-		alert('Parabéns, você conseguiu estourar todos os balões a tempo!');
+		alert('congratulations ,you win!');
 		playWin()
 		parar_jogo();
 		}
